@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Header from '../components/Header.astro';
+import Test from '../components/Test.astro';
 
 import { newtClient } from '../lib/newt'
 import type { Article } from '../lib/newt'
@@ -17,6 +18,11 @@ const { items: articles } = await newtClient.getContents<Article>({
 <Layout title="ゆがきのゆ">
 	<Header></Header>
 	<p>hellow yugaki!</p>
+	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me</button>
+	<Test></Test>
+	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me</button>
+	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me</button>
+	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me</button>
 	<button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Click me</button>
 	<ul>
 		{
@@ -36,7 +42,12 @@ const { items: articles } = await newtClient.getContents<Article>({
 	</ul>
 </Layout>
 
-
+<style lang="scss">
+	ul{
+		max-width: 500px;
+		padding-bottom: 900px;
+		background: #000;
+	}
+	</style>
 <script>
-
 </script>
